@@ -1,0 +1,59 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Amos' Portfolio{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link href="../static/assets/style.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{% block content %}
+<main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-sm-12 py-4 mt-4">
+                    <div class="title-box text-center">
+                        <h1 class="text-gradient text-primary">
+                            {{ portfolio.title }}
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper border-radius-lg shadow-lg">
+                        <div class="swiper-wrapper align-items-center">
+                            <div class="swiper-slide">
+                                <img src="../static/assets/img/portfolio/{{ portfolio.img_url }}" alt="image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="portfolio-info">
+                        <h3 class="text-info">Project information</h3>
+                        <ul>
+                            <li><strong>Title</strong>: {{ portfolio.title }}</li>
+                            <li><strong>Category</strong>: {{ portfolio.category }}</li>
+                            <li><strong>GitHub Repository</strong>: <a href="{{ portfolio.github_url }}">See Repo</a></li>
+                            <li><strong>Client</strong>: {{ portfolio.client }}</li>
+                            <li><strong>Date Released</strong>: {{ portfolio.date }}</li>
+                            <li><strong>Final Project</strong>: <a href="{{ portfolio.final_project }}">Demo App</a></li>
+                        </ul>
+                        <a href="{{ portfolio.download }}"><button class="btn btn-info">Download</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-description mt-2 py-7">
+                {{ portfolio.body | safe }}
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

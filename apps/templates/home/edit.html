@@ -1,0 +1,133 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Amos' Portfolio{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+<link href="../static/assets/style.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{{ ckeditor.load() }}
+
+{% block content %}
+<div class="content">
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-md-6 mt-5 offset-md-3 pt-5 mt-5">
+                <div class="card">
+                    <div class="card-header text-center py-4">
+                        <h3 class="title text-info">
+                            Edit Your Portfolio
+                        </h3>
+                    </div>
+                    <div class="card-body px-2 py-2">
+                        <form class="row g-3" method="POST"
+                              action="{{ url_for('home_blueprint.edit', portfolio_id=portfolio.id) }}" novalidate>
+                            {{ form.csrf_token }}
+                            <div class="col-md-12">
+                                {{ form.title.label(class="form-label") }}
+                                {{ form.title(class="form-control", value=portfolio.title) }}
+                            </div>
+                            {% for error in form.title.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.category.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.category(class="form-control", value=portfolio.category) }}
+                                </div>
+                            </div>
+                            {% for error in form.category.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.img_url.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.img_url(class="form-control", value=portfolio.img_url) }}
+                                </div>
+                            </div>
+                            {% for error in form.img_url.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.github_url.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.github_url(class="form-control", value=portfolio.github_url) }}
+                                </div>
+                            </div>
+                            {% for error in form.github_url.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.client.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.client(class="form-control", value=portfolio.client) }}
+                                </div>
+                            </div>
+                            {% for error in form.client.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.date.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.date(class="form-control", value=portfolio.date) }}
+                                </div>
+                            </div>
+                            {% for error in form.date.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.final_project.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.final_project(class="form-control", value=portfolio.final_project) }}
+                                </div>
+                            </div>
+                            {% for error in form.final_project.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-md-12">
+                                {{ form.download.label(class="form-label") }}
+                                <div class="input-group">
+                                    {{ form.download(class="form-control", value=portfolio.download) }}
+                                </div>
+                            </div>
+                            {% for error in form.download.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            {{ form.body.label(class="form-label py-3") }}
+
+                            {{ ckeditor.create(name='body', value=portfolio.body) }}
+
+                            {% for error in form.body.errors %}
+                            <span style="color: red"> {{ error }}</span>
+                            {% endfor %}
+
+                            <div class="col-12 border-top-5">
+                                {{ form.submit(class="btn btn-primary") }}
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="{{ url_for('home_blueprint.index') }}" class="btn btn-fill btn-info">HOME</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

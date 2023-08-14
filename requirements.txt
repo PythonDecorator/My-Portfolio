@@ -1,0 +1,16 @@
+gunicorn==20.1.0
+flask==2.2.5
+flask_migrate==4.0.4
+flask_minify==0.42
+flask_wtf==1.1.1
+WTForms~=3.0.1
+SQLAlchemy~=2.0.19
+Werkzeug>=2.2.2
+flask_ckeditor==0.4.6
+flask_login==0.6.2
+flask_dance==7.0.0
+flask_bootstrap==3.3.7.1
+flask_mail==0.9.1
+flask_moment==1.0.5
+flask_gravatar==0.5.0
+email_validator==2.0.0.post2

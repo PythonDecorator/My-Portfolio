@@ -1,0 +1,926 @@
+<!-- Navbar -->
+<div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+        <div class="col-12">
+            <nav class="navbar navbar-expand-lg  blur blur-rounded top-0 z-index-fixed shadow position-absolute my-3 py-2 start-0 end-0 mx-4">
+                <div class="container-fluid px-0">
+                    <a class="navbar-brand font-weight-bolder ms-sm-3"
+                       href="{{ url_for('home_blueprint.index') }}" rel="tooltip"
+                       title="Amos - Python Developer" data-placement="bottom">
+                        Amos' Portfolio
+                    </a>
+                    <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon mt-2">
+        <span class="navbar-toggler-bar bar1"></span>
+        <span class="navbar-toggler-bar bar2"></span>
+        <span class="navbar-toggler-bar bar3"></span>
+      </span>
+                    </button>
+                    <div class="collapse navbar-collapse pt-3 pb-2 py-lg-0 w-100" id="navigation">
+                        <ul class="navbar-nav navbar-nav-hover ms-lg-12 ps-lg-5 w-100">
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   href="" id="dropdownMenuPages" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Pages
+                                    <img src="../static/assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                         class="arrow ms-1">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animation dropdown-md p-3 border-radius-lg mt-0 mt-lg-3"
+                                     aria-labelledby="dropdownMenuPages">
+                                    <div class="d-none d-lg-block">
+                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
+                                            <div class="d-inline-block">
+                                                <div class="icon icon-shape icon-xs border-radius-md bg-gradient-primary text-center me-2 d-flex align-items-center justify-content-center">
+                                                    <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <title>shop</title>
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+                                                            <g transform="translate(-1716.000000, -439.000000)"
+                                                               fill="#FFFFFF" fill-rule="nonzero">
+                                                                <g transform="translate(1716.000000, 291.000000)">
+                                                                    <g transform="translate(0.000000, 148.000000)">
+                                                                        <path
+                                                                                d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"
+                                                                                opacity="0.598981585"></path>
+                                                                        <path
+                                                                                d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            Pages
+                                        </div>
+                                        <a href="{{ url_for('home_blueprint.index') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Home</span>
+                                        </a>
+                                        <a href="{{ url_for('home_blueprint.contact_us') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Contact Me</span>
+                                        </a>
+                                        <!--  ACCOUNT 1   -->
+                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0 mt-3">
+                                            <div class="d-inline-block">
+                                                <div class="icon icon-shape icon-xs border-radius-md bg-gradient-primary text-center me-2 d-flex align-items-center justify-content-center ps-0">
+                                                    <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <title>office</title>
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+                                                            <g transform="translate(-1869.000000, -293.000000)"
+                                                               fill="#FFFFFF" fill-rule="nonzero">
+                                                                <g transform="translate(1716.000000, 291.000000)">
+                                                                    <g transform="translate(153.000000, 2.000000)">
+                                                                        <path d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"
+                                                                              opacity="0.6"></path>
+                                                                        <path
+                                                                                d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            Account
+                                        </div>
+                                        {% if current_user.id == 1 %}
+                                        <a href="{{ url_for('home_blueprint.add') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Add Portfolio</span>
+                                        </a>
+                                        {% endif %}
+                                        {% if not logged_in %}
+                                        <a href="{{ url_for('authentication_blueprint.login') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Sign In</span>
+                                        </a>
+                                        {% else %}
+                                        <a href="{{ url_for('authentication_blueprint.logout') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Sign Out</span>
+                                        </a>
+                                        {% endif %}
+
+                                    </div>
+
+                                    <div class="d-lg-none">
+                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0">
+                                            <div class="d-inline-block">
+                                                <div class="icon icon-shape icon-xs border-radius-md bg-gradient-primary text-center me-2 d-flex align-items-center justify-content-center">
+                                                    <svg width="12px" height="12px" viewBox="0 0 45 40" version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <title>shop </title>
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+                                                            <g transform="translate(-1716.000000, -439.000000)"
+                                                               fill="#FFFFFF" fill-rule="nonzero">
+                                                                <g transform="translate(1716.000000, 291.000000)">
+                                                                    <g transform="translate(0.000000, 148.000000)">
+                                                                        <path
+                                                                                d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"
+                                                                                opacity="0.598981585"></path>
+                                                                        <path
+                                                                                d="M39.198,22.4912623 C37.3776246,22.4928106 35.5817531,22.0149171 33.951625,21.0951667 L33.92225,21.1107282 C31.1430221,22.6838032 27.9255001,22.9318916 24.9844167,21.7998837 C24.4750389,21.605469 23.9777983,21.3722567 23.4960833,21.1018359 L23.4745417,21.1129513 C20.6961809,22.6871153 17.4786145,22.9344611 14.5386667,21.7998837 C14.029926,21.6054643 13.533337,21.3722507 13.0522917,21.1018359 C11.4250962,22.0190609 9.63246555,22.4947009 7.81570833,22.4912623 C7.16510551,22.4842162 6.51607673,22.4173045 5.875,22.2911849 L5.875,44.7220845 C5.875,45.9498589 6.7517757,46.9451667 7.83333333,46.9451667 L19.5833333,46.9451667 L19.5833333,33.6066734 L27.4166667,33.6066734 L27.4166667,46.9451667 L39.1666667,46.9451667 C40.2482243,46.9451667 41.125,45.9498589 41.125,44.7220845 L41.125,22.2822926 C40.4887822,22.4116582 39.8442868,22.4815492 39.198,22.4912623 Z"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <!--PAGES 2-->
+                                            Pages
+                                        </div>
+                                        <a href="{{ url_for('home_blueprint.index') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Home</span>
+                                        </a>
+                                        <a href="{{ url_for('home_blueprint.contact_us') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Contact Me</span>
+                                        </a>
+
+                                        <div class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center px-0 mt-3">
+                                            <div class="d-inline-block">
+                                                <div class="icon icon-shape icon-xs border-radius-md bg-gradient-primary text-center me-2 d-flex align-items-center justify-content-center ps-0">
+                                                    <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1"
+                                                         xmlns="http://www.w3.org/2000/svg"
+                                                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <title>office</title>
+                                                        <g stroke="none" stroke-width="1" fill="none"
+                                                           fill-rule="evenodd">
+                                                            <g transform="translate(-1869.000000, -293.000000)"
+                                                               fill="#FFFFFF" fill-rule="nonzero">
+                                                                <g transform="translate(1716.000000, 291.000000)">
+                                                                    <g transform="translate(153.000000, 2.000000)">
+                                                                        <path d="M12.25,17.5 L8.75,17.5 L8.75,1.75 C8.75,0.78225 9.53225,0 10.5,0 L31.5,0 C32.46775,0 33.25,0.78225 33.25,1.75 L33.25,12.25 L29.75,12.25 L29.75,3.5 L12.25,3.5 L12.25,17.5 Z"
+                                                                              opacity="0.6"></path>
+                                                                        <path
+                                                                                d="M40.25,14 L24.5,14 C23.53225,14 22.75,14.78225 22.75,15.75 L22.75,38.5 L19.25,38.5 L19.25,22.75 C19.25,21.78225 18.46775,21 17.5,21 L1.75,21 C0.78225,21 0,21.78225 0,22.75 L0,40.25 C0,41.21775 0.78225,42 1.75,42 L40.25,42 C41.21775,42 42,41.21775 42,40.25 L42,15.75 C42,14.78225 41.21775,14 40.25,14 Z M12.25,36.75 L7,36.75 L7,33.25 L12.25,33.25 L12.25,36.75 Z M12.25,29.75 L7,29.75 L7,26.25 L12.25,26.25 L12.25,29.75 Z M35,36.75 L29.75,36.75 L29.75,33.25 L35,33.25 L35,36.75 Z M35,29.75 L29.75,29.75 L29.75,26.25 L35,26.25 L35,29.75 Z M35,22.75 L29.75,22.75 L29.75,19.25 L35,19.25 L35,22.75 Z"></path>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <!--ACCOUNT 2-->
+                                            </div>
+                                            Account
+                                        </div>
+                                        {% if current_user.id == 1 %}
+                                        <a href="{{ url_for('home_blueprint.add') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Add Portfolio</span>
+                                        </a>
+                                        {% endif %}
+                                        {% if not logged_in %}
+                                        <a href="{{ url_for('authentication_blueprint.login') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Sign In</span>
+                                        </a>
+                                        {% else %}
+                                        <a href="{{ url_for('authentication_blueprint.logout') }}"
+                                           class="dropdown-item border-radius-md">
+                                            <span class="ps-3">Sign Out</span>
+                                        </a>
+                                        {% endif %}
+                                    </div>
+
+                                </div>
+                            </li>
+                            <!--PROJECTS 1-->
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   href="" id="dropdownMenuBlocks" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Projects
+                                    <img src="../static/assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                         class="arrow ms-1"/>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-animation dropdown-lg dropdown-lg-responsive p-3 border-radius-lg mt-0 mt-lg-3"
+                                    aria-labelledby="dropdownMenuBlocks">
+                                    <div class="d-none d-lg-block">
+                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
+                                                    </div>
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <!--WEB DEVELOPMENT 1-->
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Web Development</h6>
+                                                            <span class="text-sm">See some of my Web Apps (Flask)</span>
+                                                        </div>
+
+                                                        <img src="../static/assets/img/down-arrow.svg" alt="down-arrow"
+                                                             class="arrow">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Blog Website
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Cafes & Wifi
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Amos' Portfolio
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Top 10 Movies
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Todo List
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <!--DESKTOP APP 1-->
+                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <i class="ni ni-laptop text-gradient text-primary"></i>
+                                                    </div>
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Desktop Apps</h6>
+                                                            <span class="text-sm">See some of my Desktop Apps</span>
+                                                        </div>
+
+                                                        <img src="../static/assets/img/down-arrow.svg" alt="down-arrow"
+                                                             class="arrow">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Photo Editor
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Master Typing
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Break-Out-II
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    BMI Calculator
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Tic Tac Toe
+                                                </a>
+
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Calculator
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Converter
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Kanye West Quotes
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Trivia Quiz App
+                                                </a>
+
+                                            </div>
+                                        </li>
+                                        <!--AUTOMATION 1-->
+                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <i class="ni ni-badge text-gradient text-primary"></i>
+                                                    </div>
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Automation</h6>
+                                                            <span class="text-sm">See some of my Automated Work</span>
+                                                        </div>
+
+                                                        <img src="../static/assets/img/down-arrow.svg" alt="down-arrow"
+                                                             class="arrow">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Auto Buy Cheap Product on Amazon
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Automated Birthday Wisher
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Twitter Auto Post & Follow
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Spotify Auto Playlist Creator
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Automated Cheap Flight Notifier
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Automated Weather Notifier
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <!--WEBSCRAPING/BOTS 1-->
+                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <i class="ni ni-notification-70 text-gradient text-primary"></i>
+                                                    </div>
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Webscraping/Bots</h6>
+                                                            <span class="text-sm">Some of my Webscraping/Bots</span>
+                                                        </div>
+
+                                                        <img src="../static/assets/img/down-arrow.svg" alt="down-arrow"
+                                                             class="arrow">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Amazon Price Tracker Bot
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Top 10 Billboard Songs Bot
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Top 100 Movies Bot
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Tinder Swipe Bot
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Instagram & Facebook Bot
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Twitter Bot
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <!--OPEN SOURCE 1-->
+                                        <li class="nav-item dropdown dropdown-hover dropdown-subitem">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <i class="ni ni-app text-gradient text-primary"></i>
+                                                    </div>
+                                                    <div class="w-100 d-flex align-items-center justify-content-between">
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Open Source Contributions</h6>
+                                                            <span class="text-sm">Few of my Open Source Codes</span>
+                                                        </div>
+
+                                                        <img src="../static/assets/img/down-arrow.svg" alt="down-arrow"
+                                                             class="arrow">
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-menu mt-0 py-3 px-2 mt-3">
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Morse Code Converter
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Coffee Machine
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    BlackJack Game
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Secured Password Generator
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Tip Calculator
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    Rock Paper Scissors Game
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    FizzBuzz
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="">
+                                                    HangMan Game
+                                                </a>
+                                                <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                                   href="https://github.com/PythonDecorator">
+                                                    More on GitHub...
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <!--WEB DEVELOPMENT 2-->
+                                    <div class="row d-lg-none">
+                                        <div class="col-md-12">
+                                            <div class="d-flex mb-2">
+                                                <div class="icon h-10 me-3 d-flex mt-1">
+                                                    <i class="ni ni-single-copy-04 text-gradient text-primary"></i>
+                                                </div>
+                                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Web Development </h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Blog Website
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Cafes & Wifi
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Amos' Portfolio
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Top 10 Movies
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Todo List
+                                            </a>
+                                            <!--DESKTOP APP 2-->
+                                            <div class="d-flex mb-2 mt-3">
+                                                <div class="icon h-10 me-3 d-flex mt-1">
+                                                    <i class="ni ni-laptop text-gradient text-primary"></i>
+                                                </div>
+                                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Desktop Apps</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Photo Editor
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Master Typing
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Break-Out-II
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                BMI Calculator
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Tic Tac Toe
+                                            </a>
+
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Calculator
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Converter
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Kanye West Quotes
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Trivia Quiz App
+                                            </a>
+
+                                            <!--AUTOMATION 2-->
+                                            <div class="d-flex mb-2 mt-3">
+                                                <div class="icon h-10 me-3 d-flex mt-1">
+                                                    <i class="ni ni-badge text-gradient text-primary"></i>
+                                                </div>
+                                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Automation</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/inputs.html">
+                                                Auto Buy Cheap Product on Amazon
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/inputs.html">
+                                                Automated Birthday Wisher
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/inputs.html">
+                                                Twitter Auto Post & Follow
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/forms.html">
+                                                Spotify Auto Playlist Creator
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/forms.html">
+                                                Automated Cheap Flight Notifier
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="./sections/input-areas/forms.html">
+                                                Automated Weather Notifier
+                                            </a>
+
+                                            <!--WEBSCRAPING/BOTS 2 -->
+                                            <div class="d-flex mb-2 mt-3">
+                                                <div class="icon h-10 me-3 d-flex mt-1">
+                                                    <i class="ni ni-notification-70 text-gradient text-primary"></i>
+                                                </div>
+                                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Webscraping/Bots</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Amazon Price Tracker Bot
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Top 10 Billboard Songs Bot
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Top 100 Movies Bot
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Tinder Swipe Bot
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Instagram & Facebook Bot
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Twitter Bot
+                                            </a>
+
+                                            <!--OPEN SOURCE 2-->
+                                            <div class="d-flex mb-2 mt-3">
+                                                <div class="icon h-10 me-3 d-flex mt-1">
+                                                    <i class="ni ni-app text-gradient text-primary"></i>
+                                                </div>
+                                                <div class="w-100 d-flex align-items-center justify-content-between">
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Open Source Contributions</h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Morse Code Converter
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Coffee Machine
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                BlackJack Game
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Secured Password Generator
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Tip Calculator
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                Rock Paper Scissors Game
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                FizzBuzz
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="">
+                                                HangMan Game
+                                            </a>
+                                            <a class="dropdown-item ps-3 border-radius-md mb-1"
+                                               href="https://github.com/PythonDecorator">
+                                                More on GitHub...
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                </ul>
+                            </li>
+                            <!--TOP 5 PROJECTS 1-->
+                            <li class="nav-item dropdown dropdown-hover mx-2">
+                                <a class="nav-link ps-2 d-flex justify-content-between cursor-pointer align-items-center"
+                                   href="" id="dropdownMenuDocs" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    Top 5 Projects
+                                    <img src="../static/assets/img/down-arrow-dark.svg" alt="down-arrow"
+                                         class="arrow ms-1">
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-animation dropdown-lg mt-0 mt-lg-3 p-3 border-radius-lg"
+                                     aria-labelledby="dropdownMenuDocs">
+                                    <div class="d-none d-lg-block">
+                                        <ul class="list-group">
+                                            <li class="nav-item list-group-item border-0 p-0">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                   href="{{ url_for('home_blueprint.portfolio', portfolio_id=1) }}">
+                                                    <div class="d-flex">
+                                                        <div class="icon h-10 me-3 d-flex mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="16" fill="currentColor" class="bi bi-globe"
+                                                                 viewBox="0 0 16 16">
+                                                                <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4a9.267 9.267 0 0 1 .64-1.539 6.7 6.7 0 0 1 .597-.933A7.025 7.025 0 0 0 2.255 4H4.09zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a6.958 6.958 0 0 0-.656 2.5h2.49zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5H4.847zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5H4.51zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12c.138.386.295.744.468 1.068.552 1.035 1.218 1.65 1.887 1.855V12H5.145zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11a13.652 13.652 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5H3.82zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855.173-.324.33-.682.468-1.068H8.5zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5a6.959 6.959 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5h2.49zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4a7.966 7.966 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4h2.355z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Blog Web App</h6>
+                                                            <span class="text-sm">Authentication, DB Integration, Posts, Comments and More</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item list-group-item border-0 p-0">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                   href=" {{ url_for('home_blueprint.portfolio', portfolio_id=2) }} ">
+                                                    <div class="d-flex">
+                                                        <div class="icon h-10 me-3 d-flex mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="16" fill="currentColor" class="bi bi-bricks"
+                                                                 viewBox="0 0 16 16">
+                                                                <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Break-Out-II</h6>
+                                                            <span class="text-sm">Built with Pygame, Fully Compatible with Mac, Linux and Windows</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item list-group-item border-0 p-0">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                   href=" {{ url_for('home_blueprint.portfolio', portfolio_id=3) }} ">
+                                                    <div class="d-flex">
+                                                        <div class="icon h-10 me-3 d-flex mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="16" fill="currentColor" class="bi bi-camera"
+                                                                 viewBox="0 0 16 16">
+                                                                <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                                                <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Photo Editor</h6>
+                                                            <span class="text-sm">Inspired by the popular Adobe Photoshop</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item list-group-item border-0 p-0">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                   href=" {{ url_for('home_blueprint.portfolio', portfolio_id=4) }}  ">
+                                                    <div class="d-flex">
+                                                        <div class="icon h-10 me-3 d-flex mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="16" fill="currentColor"
+                                                                 class="bi bi-pc-display-horizontal"
+                                                                 viewBox="0 0 16 16">
+                                                                <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Master Typing</h6>
+                                                            <span class="text-sm">Improves your typing speed and accuracy</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item list-group-item border-0 p-0">
+                                                <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                                   href=" {{ url_for('home_blueprint.portfolio', portfolio_id=5) }} ">
+                                                    <div class="d-flex">
+                                                        <div class="icon h-10 me-3 d-flex mt-1">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                                 height="16" fill="currentColor"
+                                                                 class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
+                                                                <path d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                                Tic Tac Toe</h6>
+                                                            <span class="text-sm">Popular Tic Tac Toe Game with AI</span>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--TOP 5 PROJECTS 2-->
+                                    <div class="row d-lg-none">
+                                        <div class="col-md-12 g-0">
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="{{ url_for('home_blueprint.portfolio', portfolio_id=1) }}">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bricks"
+                                                             viewBox="0 0 16 16">
+                                                            <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Blog Web App</h6>
+                                                        <span class="text-sm">Authentication, DB Integration, Posts, Comments and More</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="{{ url_for('home_blueprint.portfolio', portfolio_id=2) }}">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-bricks"
+                                                             viewBox="0 0 16 16">
+                                                            <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5v-3zM3 4v2h4.5V4H3zm5.5 0v2H13V4H8.5zM3 10v2h4.5v-2H3zm5.5 0v2H13v-2H8.5zM1 1v2h3.5V1H1zm4.5 0v2h5V1h-5zm6 0v2H15V1h-3.5zM1 7v2h3.5V7H1zm4.5 0v2h5V7h-5zm6 0v2H15V7h-3.5zM1 13v2h3.5v-2H1zm4.5 0v2h5v-2h-5zm6 0v2H15v-2h-3.5z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Break-Out-II</h6>
+                                                        <span class="text-sm">Built with Pygame, Fully Compatible with Mac, Linux and Windows</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="{{ url_for('home_blueprint.portfolio', portfolio_id=3) }}">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-camera"
+                                                             viewBox="0 0 16 16">
+                                                            <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
+                                                            <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Photo Editor</h6>
+                                                        <span class="text-sm">Inspired by the popular Adobe Photoshop</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="{{ url_for('home_blueprint.portfolio', portfolio_id=4) }}">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-pc-display-horizontal"
+                                                             viewBox="0 0 16 16">
+                                                            <path d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0h-13Zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5ZM12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0ZM1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1ZM1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25Z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Master Typing</h6>
+                                                        <span class="text-sm">Improves your typing speed and accuracy</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <a class="dropdown-item py-2 ps-3 border-radius-md"
+                                               href="{{ url_for('home_blueprint.portfolio', portfolio_id=5) }}">
+                                                <div class="d-flex">
+                                                    <div class="icon h-10 me-3 d-flex mt-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                             fill="currentColor" class="bi bi-grid-3x3-gap"
+                                                             viewBox="0 0 16 16">
+                                                            <path d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0">
+                                                            Tic Tac Toe</h6>
+                                                        <span class="text-sm">Popular Tic Tac Toe Game with a modern UI</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!--BUTTONS -->
+                                </div>
+                            </li>
+                            <li class="nav-item ms-lg-auto">
+                                <a class="nav-link nav-link-icon me-2"
+                                   href="https://www.linkedin.com/in/amos-okpe-48b824217/" target="_blank">
+                                    <i class="fa fa-linkedin me-1"></i>
+                                    <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip"
+                                       data-bs-placement="bottom" title="Visit my Linkedin page">Linkedin</p>
+                                </a>
+                            </li>
+                            <li class="nav-item my-auto ms-3 ms-lg-0">
+                                <a href="https://github.com/PythonDecorator?tab=repositories"
+                                   class="btn btn-sm btn-outline-primary btn-round mb-0 me-1 mt-2 mt-md-0"
+                                   target="_blank" data-bs-toggle="tooltip"
+                                   data-bs-placement="bottom" title="Check my Github Account">GitHub</a>
+                            </li>
+                            <li class="nav-item my-2 ms-3 mr-lg-5">
+
+                                <a href="{{ url_for('home_blueprint.download') }}"
+                                   class="btn btn-sm  bg-gradient-primary  btn-round mb-0 me-1 mt-2 mt-md-0"
+                                   data-bs-toggle="tooltip"
+                                   data-bs-placement="bottom" title="Download my C-V"
+                                   target="_blank">Download C-V</a>
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+        </div>
+    </div>
+</div>

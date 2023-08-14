@@ -1,0 +1,66 @@
+{% extends "layout/base.html" %}
+
+{% block title %} Error 404 {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<header class="mt-5">
+    <div class="page-header min-vh-85">
+        <div>
+            <img class="position-absolute fixed-top ms-auto w-50 h-100 z-index-0 d-none d-sm-none d-md-block border-radius-section border-top-end-radius-0 border-top-start-radius-0 border-bottom-end-radius-0"
+                 src="../static/assets/img/curved-images/curved8.jpg" alt="image">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 d-flex justify-content-center flex-column">
+                    <div class="card d-flex blur justify-content-center p-4 shadow-lg my-sm-0 my-sm-6 mt-8 mb-5">
+                        <div class="text-center">
+                            <h3 class="text-gradient text-primary">Contact Me</h3>
+                            <p class="mb-0">
+                                For further questions, including hiring opportunities, please email
+                                amosokpe.ao@gmail.com
+                                or contact me using the contact form
+                            </p>
+                        </div>
+                        <form id="contact-form" method="POST" action="{{ url_for('home_blueprint.contact_us') }}" autocomplete="off">
+                            {{ form.csrf_token }}
+                            <div class="card-body pb-2">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form.name.label(class="form-label") }}
+                                        <div class="input-group mb-4">
+                                            {{ form.name(class="form-control", placeholder="Full Name") }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 ps-md-2">
+                                        {{ form.email.label(class="form-label") }}
+                                        <div class="input-group">
+                                            {{ form.email(class="form-control", placeholder="Your Email") }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-0 mt-md-0 mt-4">
+                                    {{ form.message.label(class="form-label") }}
+                                    {{ form.message(class="form-control", rows="6", placeholder="Please type your message here, I will be glad to here from you.") }}
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" class="btn bg-gradient-primary mt-3 mb-0">Send Message
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

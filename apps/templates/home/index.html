@@ -1,0 +1,37 @@
+{% extends "layout/base.html" %}
+
+{% block title %}Amos' Portfolio{% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+ <link href="../static/assets/style.css" rel="stylesheet"/>
+{% endblock stylesheets %}
+
+{% block content %}
+{% include 'home/header.html' %}
+
+{% include "home/about.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/experience.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/counter.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/portfolio.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/testimonies.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/blog.html" %}
+<div class="b-example-divider"></div>
+
+{% include "home/contact.html" %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

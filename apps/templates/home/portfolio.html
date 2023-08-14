@@ -1,0 +1,61 @@
+<section id="work" class="portfolio-mf sect-pt4 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 py-6">
+                <div class="title-box text-center">
+                    <h1 class="text-gradient text-primary">
+                        My Portfolio
+                    </h1>
+                    <p class="subtitle-a">
+                        Here are some of my best projects
+                    </p>
+                    <div class="line-mf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% if not all_portfolio %}
+            <h1 class="text-primary">No Blog Post Yet</h1>
+            {% else: %}
+            {% for portfolio in all_portfolio %}
+            <div class="col-md-6 card w-45 border-radius-lg shadow-lg ms-5 mb-5">
+                <div class="">
+                    <a href="{{ url_for('home_blueprint.portfolio', portfolio_id=portfolio.id) }}" data-gallery="portfolioGallery" class="portfolio-lightbox">
+                        <div class="work-img work-box">
+                            <img src="../static/assets/img/portfolio/{{portfolio.img_url}}" alt="image" class="img-fluid">
+                        </div>
+                    </a>
+                    <div class="work-content">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h2 class="w-title">{{ portfolio.title }}</h2>
+                                <div class="w-more">
+                                    <span class="w-ctegory text-primary">{{ portfolio.category }}</span> / <span class="w-date">{{ portfolio.date }}</span>
+                                </div>
+                                <a href="{{ url_for('home_blueprint.portfolio', portfolio_id=portfolio.id) }}" class="text-info icon-move-right ">View Project
+                                    <i class="fas fa-arrow-right text-sm mt-2"></i>
+                                </a>
+                                {% if logged_in and current_user.id == 1 %}
+                                <a href="{{ url_for('home_blueprint.edit', portfolio_id=portfolio.id) }}" class="text-info icon-move-right px-2">Edit
+                                    <i class="fas fa-arrow-right text-sm mt-2"></i>
+                                </a>
+                                <a href="{{ url_for('home_blueprint.delete', portfolio_id=portfolio.id) }}" class="text-primary icon-move-right ">Delete
+                                    <i class="fas fa-arrow-right text-sm mt-2"></i>
+                                </a>
+                                {% endif %}
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="w-like">
+                                    <a href="{{ url_for('home_blueprint.index') }}"><span
+                                            class="bi bi-plus-circle"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+</section>
