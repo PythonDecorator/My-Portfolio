@@ -1,16 +1,12 @@
-import os
-
 from apps.authentication.models import Portfolio, ContactUs
 from apps.home import blueprint
-from flask import render_template, redirect, url_for, request, send_from_directory, current_app
+from flask import render_template, redirect, url_for, request, send_from_directory
 from flask_login import current_user, login_required
 from apps.authentication.forms import ContactUsForm, AddPortfolioForm
 from functools import wraps
 from flask import abort
 from apps import db
 from datetime import datetime
-
-from main import app
 
 
 # Admin only decorator
