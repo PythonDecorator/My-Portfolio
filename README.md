@@ -2,6 +2,13 @@
 
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
+---
+<br />
+
+![thumbnail.png](apps%2Fstatic%2Fassets%2Fimg%2Fportfolio%2Fthumbnail.png)
+## Overview
+This repo contains the code and files for my live portfolio website.
+
 <br />
 
 > Features:
@@ -17,22 +24,22 @@
 
 ## Table of Contents
 
+* [Overview](#Overview)
 * [Demo](#demo)
-* [Quick Start](#quick-start)
 * [Documentation](#documentation)
 * [File Structure](#file-structure)
 * [Browser Support](#browser-support)
-* [Resources](#resources)
 * [Reporting Issues](#reporting-issues)
 * [Technical Support or Questions](#technical-support-or-questions)
 * [Licensing](#licensing)
-* [Useful Links](#useful-links)
+* [Social Media](#Social-media)
 
 <br />
+<br />
 
-## Demo
-![demo-blog.gif](apps/static/assets/demo/demo-blog.gif)
-- **Blog Website With Flask - See Live Website** [Website](https://amos-blog.onrender.com)
+
+## My Portfolio Website
+- **Check out my portfolio - Visit Website** [Amos' Portfolio](https://amos-blog.onrender.com)
 
 <br />
 
@@ -190,24 +197,19 @@ Within the download you'll find the following directories and files:
    |    |-- templates/                      # Templates used to render pages
    |    |    |-- includes/                  # HTML chunks and components
    |    |    |    |-- navigation.html       # Top menu component
-   |    |    |    |-- sidebar.html          # Sidebar component
    |    |    |    |-- footer.html           # App Footer
    |    |    |    |-- scripts.html          # Scripts common to all pages
    |    |    |
    |    |    |-- layouts/                   # Master pages
-   |    |    |    |-- layout-fullscreen.html  # Used by Authentication pages
    |    |    |    |-- layout.html             # Used by common pages
    |    |    |
    |    |    |-- accounts/                  # Authentication pages
    |    |    |    |-- login.html            # Login page
    |    |    |    |-- register.html         # Register page
    |    |    |
-   |    |    |-- profile/                   # User Profile Pages
-   |    |    |    |-- routes                # Define user profile routes
    |    |    |
    |    |    |-- home/                      # UI Pages
    |    |         |-- index.html            # Index page
-   |    |         |-- 404-page.html         # 404 page
    |    |         |-- *.html                # All other pages
    |    |    
    |  config.py                             # Set up the app
@@ -243,7 +245,7 @@ GitHub Issues IS the official bug tracker for the **Blog Website With Flask**. H
 
 ## Technical Support or Questions
 
-If you have questions [contact me](https://github.com/PythonDecorator) instead of opening an issue.
+If you have questions `okpeamos.ao@gmail.com`
 
 <br />
 
@@ -261,4 +263,3 @@ If you have questions [contact me](https://github.com/PythonDecorator) instead o
 <br />
 
 ---
-[Blog Website With Flask](https://amos-blog.onrender.com) - Provided by PythonDecorator
