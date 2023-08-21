@@ -110,7 +110,7 @@ def delete():
 
 @blueprint.route('/download')
 def download():
-    return send_from_directory(directory='static', path="file/PY.DEVELOPER CV PDF.pdf")
+    return send_from_directory(directory='static', path="file/AmosOkpeResume.pdf")
 
 
 @blueprint.route("/contact-me", methods=['GET', 'POST'])
