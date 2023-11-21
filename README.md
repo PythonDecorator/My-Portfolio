@@ -1,4 +1,4 @@
-# [Amos Portfolio Web App](https://github.com/PythonDecorator/Blog-Website-With-Flask)
+# [Amos Portfolio Web App](https://my-portfolio-q5ur.onrender.com)
 
  ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
@@ -39,7 +39,7 @@ This repo contains the code and files for my live portfolio website.
 
 
 ## My Portfolio Website
-- **Check out my portfolio - Visit Website** [Amos' Portfolio](https://amos-blog.onrender.com)
+- **Check out my portfolio - Visit Website** [Amos' Portfolio](https://my-portfolio-q5ur.onrender.com)
 
 <br />
 
